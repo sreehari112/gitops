@@ -26,8 +26,8 @@ metaphor:
     host: https://metaphor-staging.aws.thecaptainhub.com/api
     console: https://kubefirst.aws.thecaptainhub.com
 
-  clusterSecretStoreName: <WORKLOAD_CLUSTER_NAME>-vault-kv-secret
-  vaultSecretPath: <WORKLOAD_CLUSTER_NAME>/metaphor
+  clusterSecretStoreName: staging-vault-kv-secret
+  vaultSecretPath: staging/metaphor
   configs:
-    configOne: <WORKLOAD_CLUSTER_NAME>-config-one
-    configTwo: <WORKLOAD_CLUSTER_NAME>-config-two
+    configOne: staging-config-one
+    configTwo: staging-config-two
