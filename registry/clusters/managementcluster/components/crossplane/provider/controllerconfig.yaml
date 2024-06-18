@@ -1,0 +1,17 @@
+apiVersion: pkg.crossplane.io/v1alpha1
+kind: ControllerConfig
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: '10'
+    eks.amazonaws.com/role-arn: arn:aws:iam::637423629731:role/crossplane-managementcluster
+  labels:
+    app: crossplane-provider-terraform
+  name: terraform-config
+spec:
+  serviceAccountName: crossplane-provider-terraform-managementcluster
+  args:
+  - -d
+  - --poll=4m
+  envFrom:
+  - secretRef:
+      name: crossplane-secrets
